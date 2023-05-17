@@ -1,5 +1,5 @@
 # SCU-CPP
-Lecture notes, assignments, projects and other materials for Course 'Object Oriented Programming--C++'  at [Sichuan University](https://www.scu.edu.cn/). The lect
+Lecture notes, assignments, projects and other materials for Course 'Object Oriented Programming--C++'  at [Sichuan University](https://www.scu.edu.cn/). 
 
 ## Purpose of this course
 - Exposure to standard c++ syntax and norms
