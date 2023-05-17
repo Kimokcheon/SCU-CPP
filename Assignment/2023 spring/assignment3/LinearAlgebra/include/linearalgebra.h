@@ -1,0 +1,4 @@
+#ifndef LINEARALGEBRA_H
+#define LINEARALGEBRA_H
+
+#endif //LINEARALGEBRA_H

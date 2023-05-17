@@ -1,0 +1,305 @@
+%
+% 个人自用文档样式
+%
+
+\ProvidesPackage{mpdoc}[2021/10/30  v0.1.5]
+%shzaiz
+% 眉首眉脚
+\RequirePackage{fancyhdr}
+% 调色板
+\RequirePackage{xcolor-material}
+\RequirePackage{overpic}
+% 代码提示
+\RequirePackage{listings}
+% 版边边距
+\RequirePackage[left=2cm, right=2cm, bottom=2cm]{geometry}
+% 更加现代定理、引用提示
+\RequirePackage{tcolorbox}
+% 书签
+\RequirePackage[open, openlevel=2, atend]{bookmark}
+% 链接
+\RequirePackage{hyperref}
+
+%%% 自定义 %%%
+% 主色调
+\colorlet{PrimaryColor}{MaterialPink900}
+
+%%% CTEX格式设置 %%%
+\ctexset{
+  contentsname={目录},
+  section/format=\Large\bfseries\centering\color{PrimaryColor},
+  subsection/number={\textcolor{PrimaryColor}{\thesubsection}},
+}
+
+%%% 链接设置 %%%
+\hypersetup{
+  colorlinks=true,
+  filecolor=MaterialPink,
+}
+
+%%% 代码高亮设置 %%%
+\tcbuselibrary{listings}
+
+\lstset{
+  frame=single,
+  frameround=tttt,
+  framesep=1pt,
+  framextopmargin=6pt,
+  framexbottommargin=6pt,
+  tabsize=4,
+  breaklines=true,
+  upquote=true,
+  captionpos=b,
+  basicstyle=\footnotesize,
+  backgroundcolor=\color{MaterialBlue50},
+  rulecolor=\color{MaterialBlue},
+  identifierstyle=\color{MaterialBlue800},
+    keywordstyle=[1]\bfseries\color{MaterialPurple700},
+  % 新类、新类型、新接口定义
+  keywordstyle=[2]\bfseries\color{MaterialTeal800},
+  % 原始类型
+  keywordstyle=[3]\bfseries\color{MaterialPink400},
+  % 模块
+  keywordstyle=[4]\bfseries\color{MaterialBlue900},
+  % 其他
+  keywordstyle=[5]\color{MaterialRed500},
+  numberstyle=\bfseries\color{MaterialGrey800},
+}
+
+% javascript语法定义
+\lstdefinelanguage{javascript}{
+  morekeywords=[1]{const, let, function, if, else, while, do, return, break, async, await, yield},
+  morekeywords=[2]{class, extends, super, constructor, static, this, new, get, set},
+  morekeywords=[3]{Array, Object, Number, NaN, null, undefined, Set, Buffer},
+  morekeywords=[4]{module, exports, require},
+  otherkeywords={=>},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
+  morestring=[b]`,
+}
+\lstalias{js}{javascript}
+
+% rust语法定义
+\lstdefinelanguage{rust}{
+  morekeywords=[1]{const, let, mut, fn, unsafe, while, loop, if, else, \?, return, await, async},
+  morekeywords=[1]{as, dyn, Trait, impl, static, for},
+  morekeywords=[1]{break, continue, label},
+  morekeywords=[2]{trait, type, struct, newtype, enum, Self, self},
+  morekeywords=[3]{Vec, String, str, Box, Cell, Arc, Send, Sync, Error, Option, Result},
+  morekeywords=[4]{mod, use, crate, pub},
+  morekeywords=[5]{println!, dbg!, format!, panic!},
+  otherkeywords={::},
+  sensitive=true,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[bd]",
+}
+
+\lstdefinelanguage{latex}{
+ columns=fixed,       
+ numbers=left,                                        % 在左侧显示行号
+ numberstyle=\tiny\color{gray},                       % 设定行号格式
+ frame=none,                                          % 不显示背景边框
+ backgroundcolor=\color[RGB]{245,245,244},            % 设定背景颜色
+ keywordstyle=\color[RGB]{40,40,255},                 % 设定关键字颜色
+ numberstyle=\footnotesize\color{darkgray},           
+ commentstyle=\it\color[RGB]{0,96,96},                % 设置代码注释的格式
+ stringstyle=\rmfamily\slshape\color[RGB]{128,0,0},   % 设置字符串格式
+ showstringspaces=false,                              % 不显示字符串中的空格
+ language=c++,                                        % 设置语言
+}
+
+\lstalias{rs}{rust}
+
+%%% 页眉页脚设置 %%%
+\pagestyle{fancy}
+\renewcommand{\headrule}{\color{PrimaryColor}\hrule width\textwidth}
+
+
+%%% tcolorbox %%%
+\tcbuselibrary{theorems}
+\tcbuselibrary{skins}
+\tcbsetforeverylayer{enhanced}
+
+%%% 自定义命令 %%%
+% 专名号
+\providecommand\专名[1]{%
+  \CJKunderline{#1}%
+}
+
+% 着重号
+\providecommand\着重[1]{%
+  \CJKunderdot{\heiti{#1}}%
+}
+
+% 内联代码，单一颜色
+\providecommand\代码[1]{%
+  \ttfamily\textcolor{MaterialGrey}{#1}
+}
+
+%%% 自定义环境 %%%
+% 注释
+\newcounter{zs}[subsection]
+\newenvironment{zs}
+{\begin{hkbox1}{MaterialGrey}
+%\includegraphics[scale=0.2]{hiiro/milk.png}
+      \textcolor{MaterialRed}{\heiti{注释\thesection.\refstepcounter{zs}\thezs：}}
+}
+{\end{hkbox1}}
+
+% 引理
+\newcounter{yl}[subsection]
+\newenvironment{yl}
+{\begin{hkbox1}{MaterialPink}
+%\includegraphics[scale=0.2]{hiiro/wipe.png}
+      \textcolor{MaterialPink}{\heiti{引理\thesection.\refstepcounter{yl}\theyl：}}
+}
+{\end{hkbox1}}
+% 定理
+% 定理
+\newtcbtheorem[number within=section]{dl}{定理}{
+  fonttitle=\heiti,
+  boxrule=0.1mm,
+  before upper={\parindent2em},
+  colback=MaterialPurple50,
+  colframe=MaterialPurple,
+  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+  boxed title style={colback=MaterialPurple}
+}{dl}
+
+% 推论
+\newtcbtheorem[number within=section]{tl}{推论}{
+  fonttitle=\heiti,
+  boxrule=0.1mm,
+  before upper={\parindent2em},
+  colback=MaterialDeepPurple50,
+  colframe=MaterialDeepPurple50,
+  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+  boxed title style={colback=MaterialDeepPurple}
+}{tl}
+
+\newtcbtheorem[number within=section]{dy}{定义}{
+  fonttitle=\heiti,
+  boxrule=0.1mm,
+  before upper={\parindent2em},
+  colback=MaterialDeepPurple50,
+  colframe=MaterialDeepPurple50,
+  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+  boxed title style={colback=MaterialDeepPurple}
+}{dy}
+
+
+% 结论
+\newtcbtheorem[number within=section]{jl}{结论}{
+fonttitle=\heiti,
+boxrule=0.1mm,
+before upper={\parindent2em},
+colback=MaterialGrey50,
+colframe=MaterialGrey,
+attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+boxed title style={colback=MaterialGrey}
+}{jl}
+
+% 命题
+\newtcbtheorem[number within=section]{mt}{命题}{
+  fonttitle=\heiti,
+  boxrule=0.1mm,
+  before upper={\parindent2em},
+  colback=MaterialBlueGrey50,
+  colframe=MaterialBlueGrey,
+  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+  boxed title style={colback=MaterialBlueGrey}
+}{mt}
+
+% 定义
+
+
+% 约定
+\newtcbtheorem[number within=section]{yd}{约定}{
+  fonttitle=\heiti,
+  boxrule=0.1mm,
+  before upper={\parindent2em},
+  colback=MaterialDeepOrange50,
+  colframe=MaterialDeepOrange,
+  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+  boxed title style={colback=MaterialDeepOrange}
+}{yd}
+
+%hkbox1
+\newtcolorbox{hkbox1}[1]{
+  skin=empty,
+  top=0pt,
+  bottom=0pt,
+  toprule=0pt,
+  bottomrule=0pt,
+  leftrule=0pt,
+  rightrule=0pt,
+  borderline west={2pt}{0pt}{#1},
+}
+
+%题目
+\newtcbtheorem[number within=section]{ti}{题}{
+  fonttitle=\heiti,
+  boxrule=0mm,
+  coltitle=MaterialRed,
+  colback=white,
+  colframe=white,
+  attach title to upper={\hfill},
+  boxed title style={colback=MaterialRed}
+}{ti}
+
+% 猜想
+\newtcbtheorem[number within=section]{cx}{猜想}{
+  fonttitle=\heiti,
+  boxrule=0.1mm,
+  before upper={\parindent2em},
+  colback=MaterialPink50,
+  colframe=MaterialPink,
+  attach boxed title to top left={xshift=12pt, yshift*=-\tcboxedtitleheight/2},
+  boxed title style={colback=MaterialPink}
+}{cx}
+
+
+
+
+
+% 注意
+\newenvironment{zy}
+{\begin{hkbox1}{MaterialRed}
+      %\includegraphics[scale=0.2]{hiiro/anger.png}
+      \textcolor{MaterialRed}{\heiti{注意：}}
+      
+}
+{\end{hkbox1}}
+
+\newenvironment{ts}
+{\begin{hkbox1}{MaterialRed}
+      %\includegraphics[scale=0.2]{hiiro/wink.png}
+      \textcolor{MaterialPink}{\heiti{提示：}}
+      
+}
+{\end{hkbox1}}
+
+%习题
+\newcounter{xt}[subsection]
+\newenvironment{xt}[1][]{
+\par{\bf \textcolor{MaterialBrown}{
+%\includegraphics[scale=0.2]{hiiro/cool.png}
+习题\thesection.\refstepcounter{xt}\thext}#1}\quad}{\par}
+
+
+%例题
+\newcounter{lt}[subsection]
+\newenvironment{lt}[1][]{
+\par{
+%\includegraphics[scale=0.2]{hiiro/shy.png}
+\bf \textcolor{MaterialPurple}{例题\thesection.\refstepcounter{lt}\thelt}#1}\quad}{\par}
+
+%小杂碎，放在最末尾
+\setcounter{section}{0}
+\allowdisplaybreaks[4]
+\setmainfont{CMU Serif}
+\everymath{\displaystyle}
