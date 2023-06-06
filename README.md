@@ -21,4 +21,4 @@ Lecture notes, assignments, projects and other materials for Course 'Object Orie
 - Zixiang Xu&Jinliang Gao [MineSweeper](https://github.com/Xtdzs/MineSweeper)
 - Yiheng Du&Jifeng Zhu Ray tracing
 - Yihan Yang&Xiaoyue Wang Hashmap
-- Tianqi Ge&Yong Demh[FCNet](https://github.com/Ge777777/FCNet)
+- Tianqi Ge&Yong Deng [FCNet](https://github.com/Ge777777/FCNet)
