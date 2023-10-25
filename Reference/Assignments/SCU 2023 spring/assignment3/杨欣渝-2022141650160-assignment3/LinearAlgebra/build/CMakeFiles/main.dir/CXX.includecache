@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/linearalgebra.h
+bits/stdc++.h
+-
+
+/ws/LinearAlgebra/src/linearalgebra.cpp
+linearalgebra.h
+/ws/LinearAlgebra/src/linearalgebra.h
+bits/stdc++.h
+-
+

@@ -1,0 +1,1 @@
+/usr/local/bin/c++ CMakeFiles/stuinfo.exe.dir/main.cpp.o CMakeFiles/stuinfo.exe.dir/stuinfo.cpp.o -o stuinfo.exe 

@@ -1,0 +1,13 @@
+/ws/0309/cmake02/build/CMakeFiles/install/strip.dir
+/ws/0309/cmake02/build/CMakeFiles/install/local.dir
+/ws/0309/cmake02/build/CMakeFiles/install.dir
+/ws/0309/cmake02/build/CMakeFiles/list_install_components.dir
+/ws/0309/cmake02/build/CMakeFiles/rebuild_cache.dir
+/ws/0309/cmake02/build/CMakeFiles/edit_cache.dir
+/ws/0309/cmake02/build/bin/CMakeFiles/install/strip.dir
+/ws/0309/cmake02/build/bin/CMakeFiles/install/local.dir
+/ws/0309/cmake02/build/bin/CMakeFiles/install.dir
+/ws/0309/cmake02/build/bin/CMakeFiles/list_install_components.dir
+/ws/0309/cmake02/build/bin/CMakeFiles/rebuild_cache.dir
+/ws/0309/cmake02/build/bin/CMakeFiles/edit_cache.dir
+/ws/0309/cmake02/build/bin/CMakeFiles/hello.dir

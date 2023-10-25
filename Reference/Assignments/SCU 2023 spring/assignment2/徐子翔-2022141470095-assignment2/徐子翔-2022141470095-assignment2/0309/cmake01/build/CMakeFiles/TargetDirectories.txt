@@ -1,0 +1,5 @@
+/ws/0309/cmake01/build/CMakeFiles/rebuild_cache.dir
+/ws/0309/cmake01/build/CMakeFiles/edit_cache.dir
+/ws/0309/cmake01/build/bin/CMakeFiles/rebuild_cache.dir
+/ws/0309/cmake01/build/bin/CMakeFiles/edit_cache.dir
+/ws/0309/cmake01/build/bin/CMakeFiles/hello.dir

@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/linearalgebra.h
+vector
+-
+
+/ws/Assignment_3/LinearAlgebra/src/linearalgebra.cpp
+linearalgebra.h
+/ws/Assignment_3/LinearAlgebra/src/linearalgebra.h
+vector
+-
+utility
+-
+chrono
+-
+ctime
+-
+random
+-
+cstddef
+-
+iostream
+-
+cstring
+-
+cstdio
+-
+

@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/assignment5.h
+bits/stdc++.h
+-
+author.h
+../include/author.h
+book.h
+../include/book.h
+publication.h
+../include/publication.h
+
+../include/author.h
+bits/stdc++.h
+-
+
+../include/book.h
+bits/stdc++.h
+-
+author.h
+../include/author.h
+publication.h
+../include/publication.h
+
+../include/publication.h
+bits/stdc++.h
+-
+
+/ws/assignment5/src/assignment5.cpp
+bits/stdc++.h
+-
+assignment5.h
+/ws/assignment5/src/assignment5.h
+

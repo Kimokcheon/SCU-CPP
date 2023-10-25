@@ -1,0 +1,12 @@
+#cmake_mininum_required(VERSION 3.18)
+
+project(Struct)
+
+add_library(lib SHARED ./src/exercise.cpp)
+
+add_executable(Struct ./src/main.cpp ./include/exercise.h)
+
+target_link_libraries(Struct lib)
+
+include_directories(include)
+

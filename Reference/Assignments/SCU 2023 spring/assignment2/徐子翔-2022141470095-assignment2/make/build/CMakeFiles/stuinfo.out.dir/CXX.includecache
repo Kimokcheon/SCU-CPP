@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/ws/make/main.cpp
+stuinfo.h
+/ws/make/stuinfo.h
+
+/ws/make/stuinfo.cpp
+stuinfo.h
+/ws/make/stuinfo.h
+
+/ws/make/stuinfo.h
+iostream
+-
+algorithm
+-
+cstring
+-
+

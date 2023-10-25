@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.18)
+project(calc)
+set(SRC main.cpp expression.cpp longnum.cpp)
+add_compile_options(-Wall -std=c++17 -O2)
+add_executable(main ${SRC})

@@ -1,0 +1,1 @@
+/usr/local/bin/c++ CMakeFiles/main.dir/src/main.cpp.o CMakeFiles/main.dir/src/assignment5.cpp.o CMakeFiles/main.dir/src/author.cpp.o CMakeFiles/main.dir/src/publication.cpp.o CMakeFiles/main.dir/src/book.cpp.o CMakeFiles/main.dir/src/unittest.cpp.o -o main  /usr/local/lib/libgtest.a /usr/local/lib/libgtest_main.a /usr/local/lib/libgtest.a -lpthread 
