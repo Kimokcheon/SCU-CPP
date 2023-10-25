@@ -1,3 +1,0 @@
-add_library(stuinfo SHARED stuinfo.cpp) #创建库
-add_executable(main main.cpp) #生成可执行文件
-target_link_libraries(main stuinfo) #把库链接到main

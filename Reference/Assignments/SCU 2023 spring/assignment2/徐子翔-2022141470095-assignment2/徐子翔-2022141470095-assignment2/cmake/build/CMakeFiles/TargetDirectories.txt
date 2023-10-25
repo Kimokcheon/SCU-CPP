@@ -1,3 +1,0 @@
-/ws/cmake/build/CMakeFiles/rebuild_cache.dir
-/ws/cmake/build/CMakeFiles/edit_cache.dir
-/ws/cmake/build/CMakeFiles/stuinfo.exe.dir

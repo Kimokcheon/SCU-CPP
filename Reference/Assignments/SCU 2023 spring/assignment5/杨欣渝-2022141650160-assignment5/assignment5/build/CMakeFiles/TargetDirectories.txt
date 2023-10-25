@@ -1,5 +1,0 @@
-/ws/assignment5/build/CMakeFiles/edit_cache.dir
-/ws/assignment5/build/CMakeFiles/test.dir
-/ws/assignment5/build/CMakeFiles/main.dir
-/ws/assignment5/build/CMakeFiles/rebuild_cache.dir
-/ws/assignment5/build/CMakeFiles/assignment5_lib.dir

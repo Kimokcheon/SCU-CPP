@@ -1,2 +1,0 @@
-/usr/local/bin/runhello.sh
-/ws/0309/cmake02/hello.txt

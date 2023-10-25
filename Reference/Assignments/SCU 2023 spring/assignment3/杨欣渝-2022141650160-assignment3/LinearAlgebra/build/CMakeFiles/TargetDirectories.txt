@@ -1,3 +1,0 @@
-/ws/LinearAlgebra/build/CMakeFiles/rebuild_cache.dir
-/ws/LinearAlgebra/build/CMakeFiles/edit_cache.dir
-/ws/LinearAlgebra/build/CMakeFiles/main.dir

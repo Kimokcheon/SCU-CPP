@@ -1,3 +1,0 @@
-/ws/code/Assignment5/build/CMakeFiles/rebuild_cache.dir
-/ws/code/Assignment5/build/CMakeFiles/edit_cache.dir
-/ws/code/Assignment5/build/CMakeFiles/main.dir

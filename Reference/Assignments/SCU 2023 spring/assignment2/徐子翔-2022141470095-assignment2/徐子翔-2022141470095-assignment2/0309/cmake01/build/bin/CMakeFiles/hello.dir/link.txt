@@ -1,1 +1,0 @@
-/usr/local/bin/c++ -rdynamic CMakeFiles/hello.dir/main.o -o hello 

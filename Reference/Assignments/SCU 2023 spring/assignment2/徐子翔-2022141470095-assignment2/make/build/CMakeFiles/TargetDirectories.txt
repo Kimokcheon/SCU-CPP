@@ -1,3 +1,0 @@
-/ws/make/build/CMakeFiles/rebuild_cache.dir
-/ws/make/build/CMakeFiles/edit_cache.dir
-/ws/make/build/CMakeFiles/stuinfo.out.dir

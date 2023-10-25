@@ -1,4 +1,0 @@
-PROJECT(student) 
-# 项目名称
-add_subdirectory(lib bin) 
-# 加入子文件夹lib 并且把其生成的二进制信息与.so文件与可执行文件存于 /build/bin
