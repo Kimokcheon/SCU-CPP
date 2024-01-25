@@ -8,6 +8,7 @@ Lecture notes, assignments, projects and other materials for Course 'Object Orie
 - Practice using industry standard coding tools
 
 ## Teaching team
+### 2023 Spring
 - Lecturer
     -Prof. / [Qijun Zhao](http://www.scubrl.org/qjzhao) from the [College of Computer Science](https://cs.scu.edu.cn/)
 - Teaching assistants
